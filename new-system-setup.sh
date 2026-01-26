@@ -255,5 +255,8 @@ install_docker
 
 setup_zsh $zshrctemplatepath
 
+# disable login messages
+chmod -x /etc/update-motd.d/*
+
 # logout and log back in and you are golden
 echo "################### All Done! Logout and back in again and things should be good!"
