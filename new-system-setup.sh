@@ -53,7 +53,7 @@ setup_nas()
 
     echo "################### Adding to fstab file"
     # add this line to the bottom of fstab file
-    echo -e "\n$1 $2 cifs credentials=/etc/samba/credentials" >> /etc/fstab
+    echo -e "\n$1 $2 cifs credentials=/etc/samba/credentials,uid=1000,gid=1000" >> /etc/fstab
 
     echo "################### restarting daemons"
     # restart daemons to make sure things mount correctly
