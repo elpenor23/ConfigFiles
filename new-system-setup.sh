@@ -140,7 +140,7 @@ if [ -z "$SUDO_USER" ]
 fi
 
 unset usenas
-read -p "Mount NAS? (yN)" usenasraw
+read -p "Mount NAS? [y/N]" usenasraw
 case "$usenasraw" in
     [Yy]* ) usenas=1;;
     [Nn]* ) usenas=0;;
@@ -154,14 +154,14 @@ unset nasmountpoint
 
 if [ $usenas == 1 ]
 then
-    read -p "Enter NAS address (//10.0.0.250/BradlowskiShare):" nasaddressraw
+    read -p "Enter NAS address [//10.0.0.250/BradlowskiShare]:" nasaddressraw
     
     if [ -z "$nasaddressraw" ]
     then
       nasaddress="//10.0.0.250/BradlowskiShare"  
     fi
 
-    read -p "Enter mount point to create (/mnt/nas):" nasmoutpointraw
+    read -p "Enter mount point to create [/mnt/nas]:" nasmoutpointraw
     if [ -z "$nasmoutpointraw" ]
     then
       nasmountpoint="/mnt/nas"  
@@ -198,7 +198,7 @@ fi
 
 unset usezshrctemplate
 unset zshrctemplatepath
-read -p "Use .zshrc template? (yN)" usezshrctemplateraw
+read -p "Use local .zshrc template? [y/N]" usezshrctemplateraw
 case "$usezshrctemplateraw" in
     [Yy]* ) usezshrctemplate=1;;
     [Nn]* ) usezshrctemplate=0;;
