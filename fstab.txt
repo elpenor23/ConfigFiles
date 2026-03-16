@@ -1,0 +1,2 @@
+//10.0.0.250/BradlowskiShare /mnt/nas cifs credentials=/etc/samba/credentials,uid=1000,gid=1000,x-systemd.requires=network-online.target
+//10.0.0.250/System /mnt/system cifs credentials=/etc/samba/credentials,uid=1000,gid=1000,x-systemd.requires=network-online.target
